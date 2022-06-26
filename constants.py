@@ -1,0 +1,5 @@
+HOST_NAME_IP="localhost"
+MY_SQL_DB_HOST="172.27.48.1"
+MY_SQL_USERNAME="root"
+MY_SQL_DB="mysql_db"
+MY_SQL_PASSWORD="ratcat"

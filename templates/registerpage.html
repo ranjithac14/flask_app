@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Here</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loginpage.css') }}"/>
+</head>
+<body>
+<script>
+    function verifyPassword() {
+  var paswd=  /(?=.*[+a-z])(?=.*[+A-Z])(?=.*[+0-9])(?=.*[+@$#%&])/;
+  var inputtxt=document.new_user.pwd
+  //check empty password field
+  if(inputtxt.value.match(paswd))
+{
+alert('Account created, Login')
+return true;
+}
+else
+{
+alert('Please enter atleast one uppercase,one lowercase,one digit,one special symbol')
+return false;
+}
+}
+</script>
+<form name="new_user" action="http://localhost:5002/loginauth/register_new_user" onsubmit="return verifyPassword()" method="post">
+    <h2>Register Page</h2><br>
+<div class="login">
+<p>Please fill in the details to create an account with us.</p>
+<label ><b>Enter
+    Email</b></label>
+<input type="text" placeholder="Enter Username" name="email" id="Uname">
+    <br><br>
+<label ><b>Password
+</b></label>
+<input type="password" placeholder="Enter Password" name="pwd" id="Pass" >
+    <br><br>
+<button type="submit" id="log" ><strong>Register here</strong></button>
+<p>Already have an account? <a href="/login">Sign in</a>.</p>
+</div>
+</form>
+
+</body>
+</html>
