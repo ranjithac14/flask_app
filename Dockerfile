@@ -100,6 +100,7 @@ WORKDIR /flask_app
 
 
 #Install requirements from project
+#Installing from docker file
 RUN pip3 install -r requirements.txt
 
 
