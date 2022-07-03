@@ -34,7 +34,7 @@ class LoginauthView(FlaskView):
         #     if inserted_txt == "inserted":
         #         return redirect('http://'+HOST_NAME_IP+':5000/login/login_page')
         #     else:
-        return redirect('http://'+HOST_NAME_IP+':5000/login/login_page')
+        return redirect('http://login-service:5000/login/login_page')
 
     @route('/login', methods=['POST'])
     def post(self):
@@ -49,10 +49,10 @@ class LoginauthView(FlaskView):
         # if not auth or not auth.get('Uname') or not auth.get('Pass'):
         #     response["message"] = 'Invalid data'
         #     return response, 422
-        response_url = requests.get('/databasehelper/check_user_found/ranc1')
-        response_text = response_url.json()
-        print("login_autheticate_class : ",response_text)
-        return "True"
+        # response_url = requests.get('/databasehelper/check_user_found/ranc1')
+        # response_text = response_url.json()
+        # print("login_autheticate_class : ",response_text)
+        # return "True"
         # user_db=response_text["data"]["result_dict"]
         # if not user_db:
         #     response["message"] = "Unauthorized Access!"
@@ -63,4 +63,4 @@ class LoginauthView(FlaskView):
         #         'exp': datetime.utcnow() + timedelta(hours=1)
         #     }, app.SECRET_KEY)
         #     session["token"] = token
-        return redirect('http://'+HOST_NAME_IP+':5001/application/app_page')
+        return redirect('http://app-service:5000/application/app_page')
