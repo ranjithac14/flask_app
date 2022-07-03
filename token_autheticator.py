@@ -5,7 +5,6 @@ import requests
 from flask import request, session
 
 from constants import HOST_NAME_IP
-from db_helper import DBHelperView
 from login_flask_clasful import create_app
 
 app=create_app()
